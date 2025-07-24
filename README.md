@@ -262,7 +262,7 @@ window.debugVoiceTodo.clearAll()
 
 ## License
 
-This project is open source and available under the MIT License.
+This project is open source and you can use it in your daily life :)
 
 ## Support
 
