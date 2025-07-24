@@ -4,7 +4,6 @@ A modern, responsive to-do list application that combines traditional task manag
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5ff0d821-7445-4aa0-8cfd-acae8cf5028d" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2909b02d-0b01-473e-9bdc-b0bece7f7224" />
-<img width="488" height="945" alt="image" src="https://github.com/user-attachments/assets/2a8a409f-683f-41c5-89c8-8f345df2333b" />
 
 
 ## Live Link: 
