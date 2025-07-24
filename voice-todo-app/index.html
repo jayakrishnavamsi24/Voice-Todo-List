@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice-Controlled To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="title">🎤 Voice To-Do</h1>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </header>
+
+        <!-- Voice Input Section -->
+        <section class="voice-section">
+            <button class="voice-btn" id="voiceBtn" aria-label="Start voice recording">
+                <span class="voice-icon">🎤</span>
+                <span class="voice-text">Start Listening</span>
+            </button>
+            <div class="listening-indicator" id="listeningIndicator">
+                <div class="pulse-ring"></div>
+                <span class="listening-text">Listening...</span>
+            </div>
+        </section>
+
+        <!-- Manual Input Section (Fallback) -->
+        <section class="input-section">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    class="task-input" 
+                    placeholder="Or type a task here..."
+                    aria-label="Task input"
+                >
+                <button class="add-btn" id="addBtn" aria-label="Add task">
+                    <span>+</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Task Statistics -->
+        <section class="stats-section">
+            <div class="stats">
+                <span class="stat-item">
+                    Total: <span id="totalTasks">0</span>
+                </span>
+                <span class="stat-item">
+                    Completed: <span id="completedTasks">0</span>
+                </span>
+                <span class="stat-item">
+                    Remaining: <span id="remainingTasks">0</span>
+                </span>
+            </div>
+        </section>
+
+        <!-- Task List Section -->
+        <section class="tasks-section">
+            <div class="tasks-header">
+                <h2>Your Tasks</h2>
+                <button class="clear-completed" id="clearCompleted" aria-label="Clear completed tasks">
+                    Clear Completed
+                </button>
+            </div>
+            <ul class="task-list" id="taskList" role="list">
+                <!-- Tasks will be dynamically inserted here -->
+            </ul>
+            <div class="empty-state" id="emptyState">
+                <div class="empty-icon">📝</div>
+                <h3>No tasks yet!</h3>
+                <p>Use the microphone button or type to add your first task.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Voice To-Do App. Built with ❤️ in India.</p>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <p>Initializing speech recognition...</p>
+    </div>
+
+    <!-- Error Modal -->
+    <div class="error-modal" id="errorModal">
+        <div class="error-content">
+            <span class="error-close" id="errorClose">&times;</span>
+            <h3>Oops!</h3>
+            <p id="errorMessage">Something went wrong.</p>
+            <button class="error-btn" id="errorBtn">Try Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
